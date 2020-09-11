@@ -1,0 +1,62 @@
+MACHINE LEARNING 
+
+1) C
+2) D
+3) C
+4) B
+5) B
+6) B
+7) D
+8) B,C
+9) A,B,C,D
+10)A,B,D
+11)What are outliers? Explain the Inter Quartile Range(IQR) method for outlier detection
+ 
+  An outlier is a data point that differs significantly from other observations
+  
+  IQR is used to measure variability by dividing a data set into quartiles.
+  
+  Q1 represents the 25th percentile of the data.
+  Q2 represents the 50th percentile of the data.
+  Q3 represents the 75th percentile of the data.
+  
+  Interquartile range is (IQR) = Q3 - Q1  
+  To detect the outliers using this method, we define a new range, let’s call it decision range, 
+  and any data point lying outside this range is considered as outlier . The range is as given below
+  Lower Bound: (Q1 - 1.5 * IQR)
+  Upper Bound: (Q3 + 1.5 * IQR)
+  
+12) What is the primary difference between bagging and boosting algorithms?
+	Bagging helps to decrease the model’s variance.
+	Boosting helps to decrease the model’s bias.
+13) What is adjusted R2 in logistic regression. How is it calculated?
+    Adjusted R-squared to compare the goodness-of-fit for regression models that contain differing numbers of independent variables.
+	formula
+	R2adj=1−[(1−R2)(n−1)/n−k−1]
+	n  = the number of points in your data sample.
+	k = the number of independent regressors, i.e. the number of variables in your model, excluding the constant.
+14)What is the difference between standardisation and normalisation?
+
+	Standardization rescales data to have a mean (μ) of 0 and standard deviation (σ) of 1 (unit variance).
+	
+	   Xchanged=X−μ/σ
+	   
+	Normalization rescales the values into a range of [0,1]. However, the outliers from the data set are lost.
+	
+	Xchanged=X−Xmin/Xmax−Xmin
+15)What is cross-validation? Describe one advantage and one disadvantage of using cross-validation 
+
+ Cross-validation is a technique in which we train our model using the subset of the data-set and then evaluate using the complementary subset of the data-set.
+ 
+ Advantages of Cross Validation
+
+1. Reduces Overfitting: In Cross Validation, we split the dataset into multiple folds and train the algorithm on different folds. 
+   This prevents our model from overfitting the training dataset. So, in this way, the model attains the generalization capabilities which is a good sign of a robust algorithm.
+
+Disadvantages of Cross Validation
+
+1. Increases Training Time: Cross Validation drastically increases the training time. Earlier you had to train your model only on one training set, 
+   but with Cross Validation you have to train your model on multiple training sets. 
+
+  
+  

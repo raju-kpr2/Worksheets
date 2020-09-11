@@ -1,0 +1,42 @@
+SQL Worksheet 1
+1) A,D
+2) A,B,C
+3) B
+4) B
+5) A
+6) C
+7) B
+8) B
+9) B
+10)D
+11)What is data warehouse?
+  A Data Warehouse consists of data from multiple heterogeneous data sources and is used for analytical reporting and decision making.
+  Data Warehouse is a central place where data is stored from different data sources like Operational databases,Flat Files (xls, csv, txt files)
+  
+12 ) What is the difference between OLTP VS OLAP?
+
+ OLTP (On-Line Transactional processing) - oprational system       OLTP (On-Line Analytical Processing) - Data warehouse
+1) it manages database modification                                1)  data retrieving and data analysis system
+2) Insert, Update, Delete information from the database            2)  Extract data for analyzing that helps in decision making
+3) OLTP has short transactions                                     3)  OLAP has long transactions
+4) database are normalized (3NF)                                   4)  database are not normalized
+
+
+13 ) What are the various characteristics of data warehouse?
+They are four characteristics
+
+				1.Subject Oriented
+				2.Time variant 
+				3.Integrated
+				4.Non Volatile
+14 ) What is Star-Schema?
+The star schema is the simplest data warehouse schema. 
+It is called a star schema because the diagram resembles a star, with points radiating from a center. 
+The center of the star consists of fact table and the points of the star are the dimension tables
+
+15)What do you mean by SETL?
+SETL is dedicated to building blockchain-based solutions for Financial Markets, Asset Management and Payments
+
+
+
+

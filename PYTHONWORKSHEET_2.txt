@@ -1,0 +1,84 @@
+PYTHON WORKSHEET 2
+1)B
+2)C
+3)A
+4)A
+5)C
+6)C
+7)A,C
+8)B
+9)A,B,D
+10)A,C,D
+11)Differentiate between a list, tuple, set and dictionary
+
+Lists
+
+	List is a collection which is ordered.
+	Lists are mutable (changeable) .
+	Allows duplicate members
+	Brackets used to represent: []
+	
+Tuples
+
+	Collection of items which is ordered.
+	Tuples are immutable (unchangeable) .
+	Brackets used to represent: ()
+	Only difference between tuples and lists are that lists can be changed.
+	Tuples are faster than lists as they are immutable.
+
+Sets
+
+	Collection of Unordered and Unindexed items.
+	Sets are mutable (changeable).
+	Does not take duplicate Values.
+	Sets are unordered, so you cannot be sure in which order the items will appear.
+	Brackets used to represent: { }.
+	
+Dictionaries
+
+	Dictionaries are Key:Value Pair 
+	It is a collection which is unordered, changeable and indexed.
+	dictionaries are written with curly brackets, and they have keys and values.
+	Brackets used to represent: {}.
+	
+12) Are strings mutable in python? Suppose you have a string “I+Love+Python”, write a small code to replace ‘+’
+with space in python	
+
+mytext="I+Love+Python"
+mytext=mytext.replace("+"," ")
+print(mytext)
+
+13) What does the function ord() do in python? Explain with example. Also, write down the function for getting
+the datatype of a variable in python.
+
+ The function ord()  returns the number representing the unicode code of a specified character.
+ 
+ def getDataType(a):
+    return type(a)
+    
+14. Write a python program to solve a quadratic equation of the form 𝑎𝑥
+2 + 𝑏𝑥 + 𝑐 = 0. Where a, b and c are to
+be taken by user input. Handle the erroneous input, such as ‘a’ should not be equal to 0.
+
+
+import cmath
+b,c=0,0
+def IsNotZero(a):
+    if a>0 :
+        b=int(input("Enter b : "))
+        c=int(input("Enter c : "))
+         
+        d=(b**2)-(4*a*c) #calculate the discriminant
+        # find two solutions
+        sol1 = (-b-cmath.sqrt(d))/(2*a)
+        sol2 = (-b+cmath.sqrt(d))/(2*a)
+
+        print('The solution are {0} and {1}'.format(sol1,sol2))
+    else :
+        print("Enter the real number a!=0")
+        return 
+a = int(input('Enter a: '))
+c=IsNotZero(a)
+
+
+

@@ -1,0 +1,194 @@
+MACHINE-LEARNING-WORKSHEET-3
+
+1) Give short description each of Linear, RBF, Polynomial kernels used in SVM.
+
+ SVM algorithms use a set of mathematical functions that are defined as the kernel.
+
+Linear Kernel A linear kernel can be used as normal dot product any two given observations.
+The product between two vectors is the sum of the multiplication of each pair of input values.
+
+K(x, xi) = sum(x * xi)
+
+Polynomial Kernel A polynomial kernel is a more generalized form of the linear kernel. 
+The polynomial kernel can distinguish curved or nonlinear input space.
+
+K(x,xi) = 1 + sum(x * xi)^d  Where d is the degree of the polynomial.
+
+
+Radial Basis Function Kernel The Radial basis function kernel is a popular kernel function commonly used in support vector machine classification.
+RBF can map an input space in infinite dimensional space.
+ 
+K(x,xi) = exp(-gamma * sum((x – xi^2))
+
+Here gamma is a parameter, which ranges from 0 to 1.
+
+
+2. R-squared or Residual Sum of Squares (RSS) which one of these two is a better measure of goodness of fit of
+model in regression and why??
+
+R-squared is a goodness-of-fit measure for linear regression models. 
+
+R-squared and the Goodness-of-Fit
+R-squared evaluates the scatter of the data points around the fitted regression line. 
+It is also called the coefficient of determination, or the coefficient of multiple determination for multiple regression.
+
+
+3. What are TSS (Total Sum of Squares), ESS (Explained Sum of Squares) and RSS (Residual Sum of Squares)
+in regression. Also mention the equation relating these three metrics with each other
+
+Total sum of squares (TSS)
+The population regression line, regression equation  by using the coefficient of determination, also known as R2 (R squared). 
+This is used as a measure of how well the regression equation actually describes the relationship between the dependent variable (Y) and the independent variable (X).
+TSS = Σ(Yi – mean of Y)2.
+
+
+Explained sum of squares (ESS):  Also known as the explained variation, the ESS is the portion of total variation that measures how well the regression equation explains the relationship between X and Y.
+ESS = Σ(Y^ – Yi)2.
+
+
+Residual sum of squares (RSS): This expression is also known as unexplained variation and is the portion of total variation that measures discrepancies (errors)
+ between the actual values of Y and those estimated by the regression equation.
+ RSS = Σ(Yi – Y ^)2.
+
+TSS = ESS + RSS
+
+4. What is Gini –impurity index?
+Gini Index, also known as Gini impurity, calculates the amount of probability of a specific feature that is classified incorrectly when selected randomly. 
+If all the elements are linked with a single class then it can be called pure.
+Let’s perceive the criterion of the Gini Index, like the properties of entropy, the Gini index varies between values 0 and 1 .
+
+5. Are unregularized decision-trees prone to overfitting? If yes, why?
+
+Overfitting can be one problem that describes if decision-trees no longer generalizes well.
+Overfitting is a significant practical difficulty for decision tree models and many other predictive models.
+Overfitting happens when the learning algorithm continues to develop hypotheses that reduce training set error at the cost of an
+increased test set error. There are several approaches to avoiding overfitting in building decision trees. 		
+Pre-pruning that stop growing the tree earlier, before it perfectly classifies the training set.
+Post-pruning that allows the tree to perfectly classify the training set, and then post prune the tree. 
+
+6. What is an ensemble technique in machine learning?
+
+Ensemble methods is a machine learning technique that combines several base models in order to produce one optimal predictive model 
+
+7. What is the difference between Bagging and Boosting techniques?
+ Bagging and Boosting are two types of Ensemble Learning
+ Bagging :
+ 1) Simplest way of combining predictions that belong to the same type.
+ 2) Aim to decrease variance, not bias.	
+ 3) Each model receives equal weight.
+ 4) Each model is built independently.
+ 5) Bagging tries to solve over-fitting problem.
+ eg : Random forest.
+ 
+ Boosting :
+ 1) A way of combining predictions that belong to the different types.
+ 2) Aim to decrease bias, not variance.
+ 3) Models are weighted according to their performance.
+ 4) New models are influenced by performance of previously built models.
+ 5)Boosting tries to reduce bias..
+ eg : Gradient boosting.
+ 
+ 8) what is out-of-bag error in random forests?
+ Out-of-bag error, also called out-of-bag estimate, is a method of measuring the prediction error of random forests
+ 
+ 9) What is K-fold cross-validation?
+ K-Fold CV is where a given data set is split into a K number of sections/folds where each fold is used as a testing set at some point
+ 
+ 10) What is hyper parameter tuning in machine learning and why it is done?
+ 
+ Machine learning algorithms have hyperparameters that allow you to tailor the behavior of the algorithm to your specific dataset.
+ Hyperparameters are different from parameters, which are the internal coefficients or weights for a model found by the learning algorithm. Unlike parameters,
+ hyperparameters are specified by the practitioner when configuring the model.
+ 
+ Grid Search
+ Random Search
+ 
+  11) What issues can occur if we have a large learning rate in Gradient Descent?
+  When the learning rate is too large, gradient descent can inadvertently increase rather than decrease the training error
+ 
+  12) What is bias-variance trade off in machine learning?
+ The Bias-Variance Tradeoff is relevant for supervised machine learning - specifically for predictive modeling. 
+ It's a way to diagnose the performance of an algorithm by breaking down its prediction error.
+ 
+  13) What is the need of regularization in machine learning?
+
+   Regularizations are techniques used to reduce the error by fitting a function appropriately on the given training set and avoid overfitting
+  There are three different types of regularization techniques. They are as following:
+
+	Ridge regression (L2 norm)
+	Lasso regression (L1 norm)
+	Elastic net regression
+	
+ 14. Differentiate between Adaboost and Gradient Boosting ?
+     
+	Adaboost is more about ‘voting weights’ and Gradient boosting is more about ‘adding gradient optimization’. 
+    
+    Adaboost increases the accuracy by giving more weightage to the target which is misclassified by the model. 
+	At each iteration, Adaptive boosting algorithm changes the sample distribution by modifying the weights attached to each of the instances.
+	
+	Gradient boosting calculates the gradient (derivative) of the Loss Function with respect to the prediction (instead of the features).
+	Gradient boosting increases the accuracy by minimizing the Loss Function (error which is difference of actual and predicted value) 
+	and having this loss as target for the next iteration.
+	
+ 15. Can we use Logistic Regression for classification of Non-Linear Data? If not, why?
+    Logistic regression is considered a generalized linear model because the outcome always depends on the sum of the inputs and parameters. 
+ 
+ 
+ 
+   
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+	
+  
+  
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

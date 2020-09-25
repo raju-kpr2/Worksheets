@@ -1,0 +1,132 @@
+
+1. Write SQL query to create table Customers.
+ create table Customers (
+    customerNumber int primary key,
+    customerName   varchar(255),
+    contactLastName varchar(255),
+    contactFirstName varchar(255),
+    phone int ,
+    addressLine1 varchar(255),
+    addressLine2 varchar(255),
+    city varchar(255),
+    state varchar(255),
+    postalCode int ,
+    country varchar(255),
+    salesRepEmployeeNumber int,
+    creditLimit decimal(10,2)
+ );
+ 
+ 2. Write SQL query to create table Orders.
+ 
+  create table Orders (
+    orderNumber int primary key,
+    orderDate   date,
+    requriedDate date,
+    shippedDate date,
+    status boolean ,
+    comments text,
+    customerNumber int not null,
+	FOREIGN KEY (customerNumber) REFERENCES Customers(customerNumber)
+ );
+ 
+ 3. Write SQL query to show all the columns data from the Orders Table.
+ select * from Orders
+ 
+ 4. Write SQL query to show all the comments from the Orders Table.
+ select comments from Orders
+ 
+ 5.Write a SQL query to show orderDate and Total number of orders placed on that date, from Orders table.
+ 
+ select orderDate,count(customerNumber) as  Totalorders from Orders group by orderDate
+
+ 6. Write a SQL query to show employeNumber, lastName, firstName of all the employees from employees table
+ 
+ select employeNumber, lastName, firstName  from employees
+ 
+ 7.Write a SQL query to show all orderNumber, customerName of the person who placed the respective order
+ 
+  select B.orderNumber, A.customerName from Customers A
+  join Orders B on A.customerNumber=B.customerNumber
+  
+ 8. Write a SQL query to show name of all the customers in one column and salerepemployee name in another
+column.
+
+ select GROUP_CONCAT(customerName),B.lastName +' '+B.firstname as salerepemployeeName  from customers A
+ join employees B on A.salesRepEmployeeNumber=B.employeNumber
+ group by B.lastName,B.firstname
+ 
+ 9. Write a SQL query to show Date in one column and total payment amount of the payments made on that date
+ from the payments table.
+ 
+ select paymentDate , sum(amount) as totalPayment from payments group by paymentDate
+ 
+ 10. Write a SQL query to show all the products productName, MSRP, productDescription from the products table.
+  
+  select productName, MSRP, productDescription from products
+ 
+ 11. Write a SQL query to print the productName, productDescription of the most ordered product.
+ 
+#get the mostorder data desc
+   with cts as (
+select productCode,quantity,row_number()over(order by quantity desc) mostorder from (
+select distinct productCode,sum(quantityOrdered) over(partition by productCode) quantity from orderdetails )a 
+)
+
+#select  the mostorder productName
+select b.productName,b.productDescription from cts a
+join products b on a.productCode=b.productCode
+where mostorder=1
+
+12 Write a SQL query to print the city name where maximum number of orders were placed.
+with cts as (
+select customerNumber,noOfOrders,row_number()over(order by noOfOrders desc) MaxOrdersQueue from (
+    select distinct customerNumber,count(customerNumber) over(partition by orderDate) noOfOrders from orders)a )
+
+select b.city from cts a
+join customers b on a.customerNumber=b.customerNumber
+where MaxOrdersQueue=1	
+
+13.Write a SQL query to get the name of the state having maximum number of customers.
+with cts as (
+select state,noOfCustomer,row_number()over(order by noOfCustomer desc) maxcustomerqueue from (
+select  state,count(customerName) noOfCustomer  from customers group by  state  )a )
+# get max the state having maximum number of customers
+select * from cts where maxcustomerqueue =1 
+ 
+ 14. Write a SQL query to print the employee number in one column and Full name of the employee in the second
+column for all the employees.
+
+ select GROUP_CONCAT(employeNumber),GROUP_CONCAT(lastName +' '+firstname )as FullemployeeName  from employees 
+
+
+15. Write a SQL query to print the orderNumber, customer Name and total amount paid by the customer for that
+order (quantityOrdered × priceEach).
+
+ select b.orderNumber,a.customerName,sum(p.amount)totalamount from customers a
+ join orders b on a.customerNumber =b.customerNumber
+ join payments p on p.customerNumber=b.customerNumber
+ join orderdetails d on d.orderNumber =b.orderNumber
+ group by b.orderNumber,a.customerName
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

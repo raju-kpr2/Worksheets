@@ -1,0 +1,58 @@
+MACHINE LEARNING – WORKSHEET 2
+
+1) C
+2) A
+3) C
+4) A
+5) B
+6) A,D
+7) B,C
+8) A,C
+9)B,C
+10)Explain how does the adjusted R-squared penalize the presence of unnecessary predictors in the model?
+The formulae of adjusted R2 takes into account the number of independent variables in the model.
+ AS a general thumb rule if adjusted R 2 increases when a new variables is added to the model, the variable should remain in the model.
+If the adjusted R2 decreases when the new variable is added then the variable should not remain in the model. Other factors may also be considered.
+
+
+11)Differentiate between Ridge and Lasso Regression.
+Ridge and Lasso regression uses two different penalty functions. Ridge uses L2 where as lasso go with L1. 
+In ridge regression, the penalty is the sum of the squares of the coefficients and for the Lasso, 
+it's the sum of the absolute values of the coefficients. 
+It's a shrinkage towards zero using an absolute value (l1 penalty) rather than a sum of squares(l2 penalty).
+
+As we know that ridge regression can't zero coefficients. Here,
+ you either select all the coefficients or none of them whereas LASSO does both parameter shrinkage and variable selection automatically 
+ because it zero out the co-efficients of collinear variables.
+ Here it helps to select the variable(s) out of given n variables while performing lasso regression.
+ 
+12)What is VIF? What is the suitable value of a VIF for a feature to be included in a regression modelling
+ 
+ A variance inflation factor(VIF) detects multicollinearity in regression analysis. Multicollinearity is when there’s correlation between predictors (i.e. independent variables) in a model; 
+ it’s presence can adversely affect your regression results. 
+ The VIF estimates how much the variance of a regression coefficient is inflated due to multicollinearity in the model.
+ 
+ 
+ 13). Why do we need to scale the data before feeding it to the train the model?
+Feature Scaling or Standardization: It is a step of Data Pre Processing which is applied to independent variables or features of data. It basically helps to normalise the data within a particular range. Sometimes, 
+it also helps in speeding up the calculations in an algorithm.
+
+14)What are the different metrics which are used to check the goodness of fit in linear regression?
+There are 3 main metrics for model evaluation in regression:
+1. R Square/Adjusted R Square
+2. Mean Square Error(MSE)/Root Mean Square Error(RMSE)
+3. Mean Absolute Error(MAE)
+
+15)From the following confusion matrix calculate sensitivity, specificity, precision, recall and accuracy
+
+
+Specificity = TN/FP+TN =50/250+50
+Sensitivity = TP / FN+TP=1000/1200+1000
+Precision =TP/(TP+FP)=1000/1000+250
+Recall =TP/(TP+FN) =1000/1000+1200
+Accuracy = (TP+TN)/(TP+FP+FN+TN)=1000+250/1000+250+50+1200
+
+
+
+
+

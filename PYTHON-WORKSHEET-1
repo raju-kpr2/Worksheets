@@ -1,0 +1,82 @@
+WORKSHEET-1 PYTHON
+
+1) C
+2) B
+3) C
+4) A
+5) C
+6) C
+7) A
+8) C
+9) A ,C
+10) A,B
+11)Write a python program to find the factorial of a number
+
+num = int(input("Enter a number: "))  
+factorial = 1  
+if num < 0:  
+   print("Sorry, factorial does not exist for negative numbers")  
+elif num == 0:  
+   print("The factorial of 0 is 1")  
+else:  
+   for i in range(1,num + 1):  
+       factorial = factorial*i  
+   print("The factorial of",num,"is",factorial)  
+ 
+ 12) Write a python program to find whether a number is prime or composite
+ 
+ num = int(input("Enter a number: "))  
+# prime numbers are greater than 1
+if num > 1:
+   # check for factors
+   for i in range(2,num):
+        if (num % i) == 0:
+            print(num,"is not a prime number")
+            print(i,"times",num//i,"is",num)
+            break
+        else:
+                print(num,"is a prime number")
+       
+# if input number is less than
+# or equal to 1, it is not prime
+else:
+    print(num,"is not a prime number")
+    num = int(input("Enter a number: "))  
+	
+13)Write a python program to check whether a given string is palindrome or not
+
+string=input(("Enter a string:"))
+if(string==string[::-1]):
+      print("The string is a palindrome")
+else:
+      print("Not a palindrome")
+	  
+14)Write a Python program to get the third side of right-angled triangle from two given sides
+ 
+ 
+ def pythagoras(opposite_side,adjacent_side,hypotenuse):
+        if opposite_side == str("x"):
+            return ("Opposite = " + str(((hypotenuse**2) - (adjacent_side**2))**0.5))
+        elif adjacent_side == str("x"):
+            return ("Adjacent = " + str(((hypotenuse**2) - (opposite_side**2))**0.5))
+        elif hypotenuse == str("x"):
+            return ("Hypotenuse = " + str(((opposite_side**2) + (adjacent_side**2))**0.5))
+        else:
+            return "You know the answer!"
+    
+print(pythagoras(5,6,'x'))
+
+15 ) Write a python program to print the frequency of each of the characters present in a given string
+
+# collections.Counter() 
+from collections import Counter 
+
+# initializing string 
+
+test_str=input(("Enter a string:"))
+# using collections.Counter() to get 
+# count of each element in string 
+res = Counter(test_str) 
+
+# printing result 
+print ("Count of all characters in given text is :\n "+ str(res)) 

@@ -1,0 +1,58 @@
+MACHINE-LEARNING-WORKSHEET-4
+
+1) A
+2) A
+3) B
+4) A
+5) C
+6) C
+7) B
+8) A
+9 ) Suppose we have a dataset which have two classes A and B. The percentage of class A is 40% and
+percentage of class B is 60%. Calculate the Gini index and entropy of the dataset
+
+ The Gini index for the overall examples is 1 − (0.4) 2 -(0.6)2  = 0.48
+ 
+ 10 ) What are the advantages of Random Forests over Decision Tree?
+ Decision tree and Random forest(RF) is  bagging technique and the type of ensemble model.
+ RF Is nothing but the combination of multiple Decision trees and output of model is aggression of multiple decision trees.
+ Performance of RF is better that normal DT as it uses multiple DTs for output.
+ 
+ 11) What is the need of scaling all numerical features in a dataset? Name any two techniques used for scaling.
+ Feature scaling is a method used to normalize the features of data
+ min-max normalization
+ Z-score Normalization
+ 
+ 12) Write down some advantages which scaling provides in optimization using gradient descent algorithm.
+ Gradient Descent is the most common optimization algorithm
+ We can speed up gradient descent by scaling because θ descends quickly on small ranges and slowly on large ranges, 
+ and oscillates inefficiently down to the optimum when the variables are very uneven
+ 
+ 
+ 13) In case of a highly imbalanced dataset for a classification problem, is accuracy a good metric to measure the
+performance of the model. If not, why?
+ 
+ Applying inappropriate evaluation metrics for model generated using imbalanced data can be dangerous.
+ Imagine our training data is the one illustrated in graph above. If accuracy is used to measure the goodness of a model, 
+ a model which classifies all testing samples into “0” will have an excellent accuracy (99.8%), but obviously, this model won’t provide any valuable information for us.
+
+In this case, other alternative evaluation metrics can be applied such as:
+
+Precision/Specificity: how many selected instances are relevant.
+Recall/Sensitivity: how many relevant instances are selected.
+F1 score: harmonic mean of precision and recall.
+MCC: correlation coefficient between the observed and predicted binary classifications.
+AUC: relation between true-positive rate and false positive rate.
+
+14 ) What is “f-score" metric? Write its mathematical formula
+The F-score, also called the F1-score, is a measure of a model’s accuracy on a dataset. It is used to evaluate binary classification systems
+F-score formula  = 2* (Precision*Recall)/Precision+Recall
+
+15 )What is the difference between fit(), transform() and fit_transform()?
+  fit() - It is used for calculating the initial filling of parameters on the training data (like mean of the column values) and saves them as an internal objects state
+transform() - Use the above calculated values and return modified training data
+fit_transform() - It joins above two steps. Internally, it just calls first fit() and then transform() on the same data.
+
+
+
+ 

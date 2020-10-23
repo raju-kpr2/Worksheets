@@ -1,0 +1,97 @@
+WORKSHEET_PYTHON_3
+
+1) D
+2) C
+3) B
+4) A
+5) C
+6) D
+7) B
+8) B
+9) A,B,C,D
+10) B,C,D
+11) def pattern(n):
+      k = 2 * n - 2
+      for i in range(0,n):
+           for j in range(0,k):
+               print(end=" ")
+           k = k - 1
+           for j in range(0, i+1):
+                print("*", end=" ")
+           print("\r")
+pattern(5)
+
+12) 
+def Hourglass(d):
+    character = "*"
+    rows_number = d
+
+    mid = int((rows_number+1)/2)  # This mid equation (or logic) works equally well for setting rows for both even and odd rows_number
+
+    for i in range(mid):
+        print(" "*i + character*(2*(mid-i)-1))
+    for j in range(mid-1, 0, -1):
+        print(" "*(j-1) + character*(2*(mid-j) + 1))
+		
+Hourglass(5)
+
+13)
+def pascal_triangle(n):
+   trow = [1]
+   y = [0]
+   for x in range(max(n,0)):
+      print(trow)
+      trow=[l+r for l,r in zip(trow+y, y+trow)]
+   return n>=1
+pascal_triangle(5) 
+
+14)
+def DiamondShape(star):
+    k = 2 * star - 2
+    for i in range(0, rows):
+        for j in range(0, k):
+            print(end=" ")
+        k = k - 1
+        for j in range(0, i + 1):
+            print("* ", end="")
+        print("")
+
+    k = star - 2
+
+    for i in range(rows, -1, -1):
+        for j in range(k, 0, -1):
+            print(end=" ")
+        k = k + 1
+        for j in range(0, i + 1):
+            print("* ", end="")
+        print("")
+DiamondShape(5)
+
+15)
+
+def NumberRank(star):
+    k = 2 * star - 1
+    p=0
+    for i in range(0, rows):
+        for j in range(0, k):
+            print(end=" ")
+        k = k - 1
+        for j in range(0, i + 1):
+            print(pos_to_char(j).upper()+" ", end="")
+#             print( pos_to_char( ).upper()+" ", end="")
+           
+        print("")
+
+    k = star - 1
+
+    for i in range(rows, -1, -1):
+        for j in range(k, 0, -1):
+            print(end=" ")
+        k = k + 1
+        for j in range(0, i + 1):
+            print(pos_to_char(j ).upper()+" ", end="")
+        print("")
+NumberRank(5)
+
+
+

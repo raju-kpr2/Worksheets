@@ -1,0 +1,52 @@
+MACHINE LEARNING WORKSHEET – 5
+
+1) A
+2) A
+3) D
+4) C
+5) D
+6) B
+7) C
+8) B,D
+9) B,C
+10) A,C
+11)In which situation One-hot encoding must be avoided? Which encoding technique can be used in such a case?
+    One-hot encoding not suitable for More catgorical data  and  we can use label encoding
+12)In case of data imbalance problem in classification, what techniques can be used to balance the dataset? Explain 
+
+ Following Techniques used for  imbalanced datasets to improving classification algorithms
+Resampling Techniques
+Random Over-Sampling
+Cluster-Based Over Sampling
+Informed Over Sampling: Synthetic Minority Over-sampling Technique for imbalanced data
+
+13)What is the difference between SMOTE and ADASYN sampling techniques?
+
+The major difference between SMOTE and ADASYN is the difference in the generation of synthetic sample points for minority data points. 
+In ADASYN, we consider a density distribution rₓ which thereby decides the number of synthetic samples to be generated for a particular point,
+ whereas in SMOTE, there is a uniform weight for all minority points.
+
+14) What is the purpose of using GridsearchCV? Is it preferable to use in case of large datasets? Why or why not?
+Grid search is the process of performing hyper parameter tuning in order to determine the optimal values for a given model. 
+With small data sets and lots of resources, Grid Search will produce accurate results. However, with large data sets, 
+the high dimensions will greatly slow down computation time and be very costly. In this instance, it is advised to use Randomized Search
+
+15)List down some of the evaluation metric used to evaluate a regression model. Explain each of them in brief
+
+There are 3 main metrics for model evaluation in regression:
+1. R Square/Adjusted R Square
+2. Mean Square Error(MSE)/Root Mean Square Error(RMSE)
+3. Mean Absolute Error(MAE)
+
+R Square/Adjusted R Square
+R Square measures how much of variability in dependent variable can be explained by the model. 
+It is square of Correlation Coefficient(R) and that is why it is called R Square.
+
+Mean Square Error(MSE)/Root Mean Square Error(RMSE)
+While R Square is a relative measure of how well the model fits dependent variables, 
+Mean Square Error is an absolute measure of the goodness for the fit.
+
+Mean Absolute Error(MAE)
+Mean Absolute Error(MAE) is similar to Mean Square Error(MSE). However, instead of the sum of square of error in MSE,
+ MAE is taking the sum of absolute value of error.
+

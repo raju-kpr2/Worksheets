@@ -1,0 +1,40 @@
+DEEP LEARNING – WORKSHEET 3
+
+1) B
+2) C
+3) A
+4) D
+5) C
+6) B
+7) B
+8) A
+9) B ,C 
+10) A, B
+11)What will happen if we do not use activation function in artificial neural networks?
+A neural network without an activation function is essentially just a linear regression model.
+ The activation function does the non-linear transformation to the input making it capable to learn and perform more complex tasks.
+ 
+12. How does forward propagation and backpropagation work in deep learning?
+Forward propagation (or forward pass) refers to the calculation and storage of intermediate variables (including outputs) for a neural network 
+in order from the input layer to the output layer.
+Backpropagation refers to the method of calculating the gradient of neural network parameters. 
+In short, the method traverses the network in reverse order, from the output to the input layer.
+
+13. Explain briefly the following variant of Gradient Descent: Stochastic, Batch, and Mini-batch?
+Stochastic Gradient Descent:
+Uses only single training example to calculate the gradient and update parameters.
+Batch Gradient Descent:
+Calculate the gradients for the whole dataset and perform just one update at each iteration.
+Mini-batch Gradient Descent:
+Mini-batch gradient is a variation of stochastic gradient descent where instead of single training example,
+ mini-batch of samples is used. It’s one of the most popular optimization algorithms. 
+ 
+14.What are the main benefits of Mini-batch Gradient Descent?
+ 
+High throughput: With mini-batch one can process a large number of input examples per second. The mini batching style of gradient descent is perhaps the only way to use the large number of cores at once in a GPU.
+faster convergence: The high througput may also translate to faster convergence depending on the variance in the dataset and the learning rate used.
+High quality gradient: Mini batching allows for a high quality gradient and this will be really useful allowing one to use high learning rates.
+
+15. What is transfer learning?
+Transfer learning is a machine learning method where a model developed for a task is reused as the starting point for a model on a second task.
+Transfer Learning differs from traditional Machine Learning in that it is the use of pre-trained models that have been used for another task to jump start the development process on a new task or problem.

@@ -1,0 +1,22 @@
+WEB SCRAPING – WORKSHEET 4
+1) C
+2) C
+3) B
+4) B
+5) D
+6) D
+7) A
+8) C
+9) B
+10) D
+11) C
+12) A
+13) C
+14) B
+15) BeautifulSoup's find() and findAll() methods can easily filter HTML (XML) files 
+with different attributes in the HTML code to find the desired tag group or individual tags.
+
+find_all()
+You can use find_all to extract all the occurrences of a particular tag from the page/document 
+find()
+first tag of the incoming HTML object that satisfies the condition and returns. 

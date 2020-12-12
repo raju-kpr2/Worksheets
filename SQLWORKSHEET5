@@ -106,6 +106,18 @@ group by title
 column for all the movies.
 
 
+select a.movie_id,c.company_name from movie a
+join movie_company b on a.movie_id=b.movie_id
+join production_company c on c.company_id=b.company_id
+
+15. Write a SQL query to show the title of top 20 movies arranged in decreasing order of their budget.
+
+  with cts as (
+ select  title,row_number() over(order by budget desc) Maxbudget from movie group by title 
+ )
+ select a.title  from Movie a
+ join cts b on a.title=b.title
+ where Maxbudget<=20
 
 
 

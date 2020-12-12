@@ -1,0 +1,150 @@
+SQL-WORKSHEET-5
+
+1)Write SQL query to show all the data in the Movie table
+
+select * from Movie
+
+2) Write SQL query to show the title of the longest runtime movie
+ with cts as (
+ select  title,row_number() over(order by runtime desc) Maxruntime from movie group by title 
+ )
+ select a.title  from Movie a
+ join cts b on a.title=b.title
+ where Maxruntime=1
+ 
+3) Write SQL query to show the highest revenue generating movie title.
+
+ with cts as (
+ select  title,row_number() over(order by revenue desc) Maxrevenue from movie group by title 
+ )
+ select a.title  from Movie a
+ join cts b on a.title=b.title
+ where Maxrevenue=1
+ 
+ 4)Write SQL query to show the movie title with maximum value of revenue/budget.
+  with cts as (
+ select  title,row_number() over(order by budget desc) Maxbudget from movie group by title 
+ )
+ select a.title  from Movie a
+ join cts b on a.title=b.title
+ where Maxbudget=1
+ 
+ 5. Write a SQL query to show the movie title and its cast details like name of the person, gender, character
+name, cast order
+
+select a.title,b.person_name,g.gender,b.character_name,b.cast_order   from movie a
+join movie_cast b on a.title=b.title
+join person p on p.person_id=b.person_id
+join gender g on g.gender_id=b.gender_id
+ 
+6) Write a SQL query to show the country name where maximum number of movies has been produced, along
+with the number of movies produced.
+ with cts as (
+ select country_id,row_number()over(partition by movie_id) max_movieid from production_country group by country_id
+ )
+ select a.country_id,b.character_name   from production_country a
+ join country b on a.country_id=b.country_id
+ where max_movieid=1
+ 
+ 
+ 7. Write a SQL query to show all the genre_id in one column and genre_name in second column
+ 
+  select string_agg(gender_id,',') gender_id,string_agg(gender,',')gender from gender 
+  
+ 8. Write a SQL query to show name of all the languages in one column and number of movies in that
+particular column in another column. 
+
+select language_name,count(movie_id) from movie_languages a
+join languages b on b.language_id=a.language_id
+ group by language_name
+ 
+ 
+ 9.Write a SQL query to show movie name in first column, no. of crew members in second column and
+number of cast members in third column
+
+select a.title,count(b.person_id) no_crewmembers ,count(c.person_id) no_castmembers  from movie a
+join movie_crew b on b.movie_id=a.movie_id
+join movie_cast c on c.movie_id=a.movie_id
+group by a.title
+
+10. Write a SQL query to list top 10 movies title according to popularity column in decreasing order
+
+ with cts as (
+ select  title,row_number() over(order by popularity desc) Maxpopularity from movie group by title 
+ )
+ select a.title  from Movie a
+ join cts b on a.title=b.title
+ where Maxbudget<11
+ 
+ 11. Write a SQL query to show the name of the 3rd most revenue generating movie and its revenue.
+
+
+ with cts as (
+ select  title,row_number() over(order by revenue desc) Maxrevenue from movie group by title 
+ )
+ select a.title,b.Maxrevenue  from Movie a
+ join cts b on a.title=b.title
+ where Maxrevenue<4
+ 
+ 12. Write a SQL query to show the names of all the movies which have “rumoured” movie status.
+  select * from movie where movie_status="rumoured"
+  
+  13. Write a SQL query to show the name of the “United States of America” produced movie which generated
+maximum revenue.
+
+
+ with cts as (
+ select  title,row_number() over(order by revenue desc) Maxrevenue from movie 
+ where title='United States of America'
+group by title 
+ )
+ select a.title  from Movie a
+ join cts b on a.title=b.title
+ where Maxrevenue=1
+
+14. Write a SQL query to print the movie_id in one column and name of the production company in the second
+column for all the movies.
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

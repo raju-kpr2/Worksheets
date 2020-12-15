@@ -1,0 +1,52 @@
+DEEP-LEARNING-WORKSHEET-4
+1)C
+2)B
+3)B
+4)D
+5)A
+6)B
+7)B
+8)D
+9)B,C
+10)A,B,C
+11)Describe the basic architecture of a CNN?
+
+Basic Architecture
+A convolution tool that separates and identifies the various features of the image for analysis in a process called as Feature Extraction
+
+A fully connected layer that utilizes the output from the convolution process and predicts the class of the image based on the features extracted in previous stages.
+
+1. Convolutional Layer
+2. Pooling Layer
+3. Fully Connected Layer
+4. Dropout
+5. Activation Functions
+
+12. What is convolution in CNN? What is the role of convolution in image processing?
+
+This layer is the first layer that is used to extract the various features from the input images. 
+In this layer, the mathematical operation of convolution is performed between the input image and a filter of a particular size MxM. 
+By sliding the filter over the input image, the dot product is taken between the filter and the parts of the input image with respect to the size of the filter (MxM).
+
+The output is termed as the Feature map which gives us information about the image such as the corners and edges. 
+Later, this feature map is fed to other layers to learn several other features of the input image.
+
+13. What is the difference between Max Pooling and Average Pooling? Explain briefly.
+Average pooling method smooths out the image and hence the sharp features may not be identified when this pooling method is used.
+Max pooling selects the brighter pixels from the image. 
+Max pooling is a sample-based discretization process. The objective is to down-sample an input representation
+It is useful when the background of the image is dark and we are interested in only the lighter pixels of the image
+
+14. What is Padding? Why is it used?
+Padding is a term relevant to convolutional neural networks as it refers to the amount of pixels added to an image when it is being processed by the kernel of a CNN. For example, if the padding in a CNN is set to zero, then every pixel value that is added will be of value zero. 
+If, however, the zero padding is set to one, there will be a one pixel border added to the image with a pixel value of zero.
+
+
+15. Describe the layers used in classification part of a CNN?
+In machine learning, Convolutional Neural Networks (CNN or ConvNet) are complex feed forward neural networks. 
+CNNs are used for image classification and recognition because of its high accuracy. 
+There are three types of layers in a convolutional neural network: convolutional layer, pooling layer, and fully connected layer. 
+Each of these layers has different parameters that can be optimized and performs a different task on the input data.
+
+
+

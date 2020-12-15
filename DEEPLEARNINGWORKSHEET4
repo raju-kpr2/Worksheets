@@ -1,52 +1,42 @@
-DEEP-LEARNING-WORKSHEET-4
-1)C
+DEEP LEARNING
+
+1)D
 2)B
-3)B
-4)D
+3)C
+4)A
 5)A
-6)B
+6)C
 7)B
-8)D
-9)B,C
-10)A,B,C
-11)Describe the basic architecture of a CNN?
+8)A
+9)A,B,D 
+10)B,D
+11)What is Deep Learning?
+Deep learning is a machine learning technique. It teaches a computer to filter inputs through layers to learn how to predict and classify information. 
+Observations can be in the form of images, text, or sound. The inspiration for deep learning is the way that the human brain filters information
+12)What is reinforcement learning?
+Reinforcement Learning is defined as a Machine Learning method that is concerned with how software agents should take actions in an environment. 
+Reinforcement Learning is a part of the deep learning method that helps you to maximize some portion of the cumulative reward.
 
-Basic Architecture
-A convolution tool that separates and identifies the various features of the image for analysis in a process called as Feature Extraction
+13)What Are the Differences Between Machine Learning and Deep Learning?
 
-A fully connected layer that utilizes the output from the convolution process and predicts the class of the image based on the features extracted in previous stages.
+Machine Learning: Machine learning is a subset, an application of Artificial Intelligence (AI) that offers the ability to the system to learn and 
+improve from experience without being programmed to that level. Machine Learning uses data to train and find accurate results.
+ Machine learning focuses on the development of a computer program that accesses the data and uses it to learn from themselves.
 
-1. Convolutional Layer
-2. Pooling Layer
-3. Fully Connected Layer
-4. Dropout
-5. Activation Functions
+Deep Learning: Deep Learning is a subset of Machine Learning where the artificial neural network, the recurrent neural network comes in relation. 
+The algorithms are created exactly just like machine learning but it consists of many more levels of algorithms.
+ All these networks of the algorithm are together called as the artificial neural network. In much simpler terms,
+ it replicates just like the human brain as all the neural networks are connected in the brain, 
+ exactly is the concept of deep learning. It solves all the complex problems with the help of algorithms and its process.
+ 
+ 14) What is a perceptron?
+ A perceptron is a simple model of a biological neuron in an artificial neural network. 
+ Perceptron is also the name of an early algorithm for supervised learning of binary classifiers.
 
-12. What is convolution in CNN? What is the role of convolution in image processing?
+The perceptron algorithm was designed to classify visual inputs, categorizing subjects into one of two types and separating groups with a line. 
+Classification is an important part of machine learning and image processing.
 
-This layer is the first layer that is used to extract the various features from the input images. 
-In this layer, the mathematical operation of convolution is performed between the input image and a filter of a particular size MxM. 
-By sliding the filter over the input image, the dot product is taken between the filter and the parts of the input image with respect to the size of the filter (MxM).
+15)What’s the difference between AI and ML?
 
-The output is termed as the Feature map which gives us information about the image such as the corners and edges. 
-Later, this feature map is fed to other layers to learn several other features of the input image.
-
-13. What is the difference between Max Pooling and Average Pooling? Explain briefly.
-Average pooling method smooths out the image and hence the sharp features may not be identified when this pooling method is used.
-Max pooling selects the brighter pixels from the image. 
-Max pooling is a sample-based discretization process. The objective is to down-sample an input representation
-It is useful when the background of the image is dark and we are interested in only the lighter pixels of the image
-
-14. What is Padding? Why is it used?
-Padding is a term relevant to convolutional neural networks as it refers to the amount of pixels added to an image when it is being processed by the kernel of a CNN. For example, if the padding in a CNN is set to zero, then every pixel value that is added will be of value zero. 
-If, however, the zero padding is set to one, there will be a one pixel border added to the image with a pixel value of zero.
-
-
-15. Describe the layers used in classification part of a CNN?
-In machine learning, Convolutional Neural Networks (CNN or ConvNet) are complex feed forward neural networks. 
-CNNs are used for image classification and recognition because of its high accuracy. 
-There are three types of layers in a convolutional neural network: convolutional layer, pooling layer, and fully connected layer. 
-Each of these layers has different parameters that can be optimized and performs a different task on the input data.
-
-
-
+we can differentiate both AI and ML as: AI is a bigger concept to create intelligent machines that can simulate human thinking capability and behavior, whereas, 
+machine learning is an application or subset of AI that allows machines to learn from data without being programmed explicitly.
